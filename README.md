@@ -42,8 +42,8 @@ Aplicació d'escriptori per explorar les estadístiques dels jugadors d'un equip
 ### Passos
 
 ```bash
-git clone https://github.com/<el-teu-usuari>/<el-teu-repositori>.git
-cd <el-teu-repositori>
+git clone https://github.com/HerLo12/Treball-de-Recerca-Edgar-Hernandez-Lopez-2026-27.git
+cd Treball-de-Recerca-Edgar-Hernandez-Lopez-2026-27
 
 python -m venv .venv
 # Windows:
@@ -72,27 +72,6 @@ python main.py
 3. **Clustering.** Per a cada gràfic, els valors dels dos eixos s'estandarditzen i s'agrupen amb un K-Means implementat amb NumPy (inicialització k-means++ i diverses repeticions). Els grups s'ordenen de menor a major segons l'eix o la combinació d'eixos definida per a aquell gràfic, i d'aquest ordre en surten el nom i el color.
 4. **Gràfics.** Es dibuixen amb matplotlib (backend TkAgg) amb una llegenda per grup i el tooltip interactiu.
 
-## Generar l'executable (Windows)
-
-Necessites Python instal·lat. Posa `main.py`, `playersdb.py`, `build.bat` i la carpeta `datos` (si la fas servir) a la mateixa carpeta i executa:
-
-```bat
-build.bat
-```
-
-L'script crea un entorn virtual net, instal·la les dependències i genera l'executable amb `flet pack` en mode carpeta. El resultat és a `dist\NBAPlayers\NBAPlayers.exe`. Per repartir-lo, comprimeix tota la carpeta `dist\NBAPlayers` en un `.zip`.
-
-Si prefereixes fer-ho a mà:
-
-```bat
-pip install flet pyinstaller numpy pandas matplotlib
-flet pack main.py --name NBAPlayers --onedir --yes --add-data "datos:datos"
-```
-
-### Per què carpeta (`--onedir`) i no un sol `.exe`?
-
-Amb `--onefile`, cada arrencada descomprimeix tot el contingut a una carpeta temporal, cosa que fa que l'aplicació trigui diversos segons a obrir-se. Com que els gràfics s'obren en un segon procés, aquest cost es repeteix. El mode carpeta arrenca molt més ràpid.
-
 ## Resolució de problemes
 
 Si alguna cosa falla, l'aplicació ho indica a la finestra i desa els detalls tècnics en un fitxer de registre:
@@ -107,8 +86,4 @@ Si obres una *issue*, adjunta el contingut d'aquest fitxer.
 
 ## Dades
 
-<!-- Indica aquí l'origen de les dades (per exemple, el conjunt de dades de Kaggle o l'API que fas servir), la seva llicència i l'última data d'actualització. -->
-
-## Llicència
-
-<!-- Tria una llicència (per exemple, MIT) i afegeix el fitxer LICENSE al repositori. -->
+KAGGLE (2026)  NBA Players Historical Dataset https://www.kaggle.com
