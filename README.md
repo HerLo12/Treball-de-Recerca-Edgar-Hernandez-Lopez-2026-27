@@ -1,0 +1,1 @@
+# Treball-de-Recerca-Edgar-Hernandez-Lopez-2026-27
